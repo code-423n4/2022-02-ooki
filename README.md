@@ -1,10 +1,11 @@
 # OOKI Margin Trading and Lending Protocol contest details
-- $40,000 USDC main award pot
+- $28,500 USDC main award pot
+- $1,500 gas optimizatino award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://github.com/code-423n4/2022-02-ooki-findings/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2022-02-ooki-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TODO
-- Ends TODO
+- Starts February 16, 2022 00:00 UTC
+- Ends February 18, 2022 23:59 UTC
 
 ## Things to Look Out For
 
