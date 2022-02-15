@@ -95,7 +95,7 @@ Total : 60 files changed, 3995 insertions(+), 3752 deletions(-)
 | 523     | 0       | testspolygon/interest-rate-model/test_InterestRate.py |
 | 449     | 374     | yarn.lock |
 
-detailed change can be easily found by the following diff [here](https://github.com/bZxNetwork/contractsV2/pull/163/files))
+detailed change can be easily found by the following diff [here](https://github.com/bZxNetwork/contractsV2/pull/163/files)
 
 
 
