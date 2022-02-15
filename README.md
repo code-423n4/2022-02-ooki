@@ -1,6 +1,6 @@
 # OOKI Margin Trading and Lending Protocol contest details
 - $28,500 USDC main award pot
-- $1,500 gas optimizatino award pot
+- $1,500 gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-02-ooki-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
