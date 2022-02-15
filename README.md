@@ -15,12 +15,12 @@ Setup guide, can be found [here.](https://github.com/bZxNetwork/contractsV2/tree
 
 The full repository is located [here.](https://github.com/bZxNetwork/contractsV2/commit/acf4c8fc775986c26802c0d8eaf9b775d48df9a7). The scope of this audit is the changes found in the following diff [here](https://github.com/bZxNetwork/contractsV2/pull/163/files), made as a result of a previous audit from another firm.
 
-The protocol's core `bZxProtocol` contract is deployed which is a custom moduled proxy, and the `Modules` that can be found in `contract/modules` folder. .
-For every underlying asset there is `IToken` contract is being deployed. 
+The protocol's core `bZxProtocol` contract is deployed which is a custom moduled proxy, and the `Modules` can be found in `contract/modules` folder.
+For every underlying asset there is an `IToken` contract which is the tokenized lending pool. 
 
-The highest financial risk lies in the new interest accruing mechanism that was developed, before there was a rollover mechanism using `rollover` function. EOA could trigger once in 28 days rollover function for the loan to pay for the accrued interest. Interest was taken from collateral and paid upfront for 28 days. This mechanism was replaced by dynamic interest rate. since we know current `borrowInterestRate()` we can instead dynamically increase loan every block instead of taking it out from collateral check `InterestHandler.sol`. It's important to make sure that all modules are secure and all edge cases are accounted for appropriately, including cases where iToknes are burned minted traded and transfered.
+The highest financial risk lies in the new interest accruing mechanism that was developed. The previous version used a rollover mechanism using `rollover` function. An EOA could trigger once every 28 days the rollover function for the loan to pay for the accrued interest. Interest was taken from collateral and paid upfront for 28 days. This mechanism has been replaced by dynamic interest rate that is added to the principal of loan. The new contract that is being used to handle this in the protocol is `InterestHandler.sol`. It is important to make sure that all modules are secure and all edge cases are accounted for appropriately, including cases where iTokens are burned minted traded and transfered.
 
-Next critical change is the dex selector that can be used from ui to indicate which route order should take for the swap. initially `SwapsImplUniswapV3_ETH.sol` , `SwapsImplUniswapV2_ETH.sol` will be supported thru `DexRecords` contract. payload with details for the swap is passed externally and great care should be taken into verifying those details onchain.
+Next critical change is dex selector which is a new feature that allows users to select a dex and provide the necessary payload to execute the swap for the margin trade on the dex chosen. initially `SwapsImplUniswapV3_ETH.sol` , `SwapsImplUniswapV2_ETH.sol` will be supported through `DexRecords` contract and the swapImpl that is seen in protocol's core `bZxProtocol` would be set to the contract address of the deployed `DexRecords`. payload with details for the swap is passed externally and great care should be taken into verifying those details onchain.
 
 Another change is we added small fee for the flash loans check `payFlashBorrowFees` use cases
 
