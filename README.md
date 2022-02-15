@@ -8,7 +8,7 @@
 
 ## Things to Look Out For
 
-Note: The brownie configuration and tests are are out of scope. Only .sol files are in scope
+Note: The brownie configuration and tests are are out of scope. `testhelpers` is out of scope as well.
 
 Setup guide, can be found [here.](https://github.com/bZxNetwork/contractsV2/tree/interest-model-redesign) make sure its `interest-model-redesign` branch
 
