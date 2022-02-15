@@ -13,7 +13,7 @@ Note: The brownie configuration and tests are are out of scope. `testhelpers` is
 
 Setup guide, can be found [here.](https://github.com/bZxNetwork/contractsV2/tree/interest-model-redesign) make sure its `interest-model-redesign` branch
 
-The full repository is located [here](https://github.com/bZxNetwork/contractsV2/commit/ba9a71fbfae99fbbbddbbcb72b8605624b911f56). The scope of this audit is the changes found in the following diff [here](https://github.com/bZxNetwork/contractsV2/pull/163/files), made as a result of a previous audit from another firm.
+The full repository and the commit that is used for the scope of this audit is located [here](https://github.com/bZxNetwork/contractsV2/tree/ba9a71fbfae99fbbbddbbcb72b8605624b911f56). The scope of this audit is the changes found in the following diff [here](https://github.com/bZxNetwork/contractsV2/pull/163/files), made as a result of a previous audit from another firm.
 
 The protocol's core `bZxProtocol` contract is deployed which is a custom moduled proxy, and the `Modules` can be found in `contract/modules` folder.
 For every underlying asset there is an `IToken` contract which is the tokenized lending pool. 
