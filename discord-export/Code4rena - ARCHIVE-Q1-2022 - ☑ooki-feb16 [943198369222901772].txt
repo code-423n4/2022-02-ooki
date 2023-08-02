@@ -1,0 +1,176 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2022 / ☑ooki-feb16
+==============================================================
+
+[02/15/2022 5:35 PM] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $30K USDC **Ooki **contest!
+
+📆 Contest opens February 16, 2022, at 0:00 UTC (in about 6.5 hours!) and runs through February 18, 2022 at 23:59 UTC (3 days).
+
+Please give a warm welcome to the Ooki team, particularly @Roman | OOKI, who will be available for questions either here in the channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+{Reactions}
+🥳 (3) 
+
+[02/15/2022 5:36 PM] itsmetechjay
+Pinned a message.
+
+
+[02/16/2022 12:13 AM] 0xleastwood
+hey @Roman | OOKI I can't seem to reach you. Do you think you could DM me as I have some questions
+
+
+[02/16/2022 12:17 AM] Roman | OOKI#6129
+Hi
+
+
+[02/16/2022 12:17 AM] Roman | OOKI#6129
+@0xleastwood going to sleep accept my friend request
+
+
+[02/16/2022 2:47 PM] 0x1f8b
+The scope is based on another audit, but if it was found a vulnerability in the contracts, but not in the diff, it will be rewarded? Scope is scope or scope is ... focus on?
+
+
+[02/16/2022 3:09 PM] dravee
+Going through "only" the diffs was kinda tiring 😅 . But this is what I understood too: scope is strictly in the diffs. It's a good question.
+
+{Reactions}
+💯 (2) 
+
+[02/16/2022 5:51 PM] Drypto#2462
+For critical vulnerabilities the whole repo is fair game but for gas optimizations or non-critical bugs we would prefer it to be what was specified in scope which is the diffs. Outside of scope is fine but preference is the diffs.
+
+
+[02/16/2022 7:39 PM] dravee
+Mmmmhhh missed that, but thankfully didn't submit anything yet: `testhelpers/TWAI.sol` is out of scope. I'm sharing this with others to insist on it ^^
+
+
+[02/17/2022 1:49 AM] 0xliumin#4064
+hello. i am missing how LoanTokenSettings and LoanTokenSettingsLowerAdmin connects with the rest of the contracts. I am unable to find anything that directly references these. Are these supposed to be deployed as independent contracts?
+
+
+[02/17/2022 2:20 AM] Drypto#2462
+independently deployed contracts but how they are called can be seen in LoanTokenLogicStandard.sol with the function updateSettings()
+
+
+[02/17/2022 2:24 AM] Drypto#2462
+If a bug is found and is out of scope, feel free to submit it anyways as we are open to that since it is still part of the protocol and of importance to take note of and address
+
+
+[02/17/2022 9:50 AM] Eugene | OOKI#3479
+Hi
+
+
+[02/17/2022 1:12 PM] geopok20216#4651
+Can you list the exact commands/changes in order to get all tests passing in a fresh env? The instructions appear to be missing a 'yarn install' and even after that all tests are failing
+
+
+[02/17/2022 3:10 PM] Eugene | OOKI#3479
+it depends on tests you are running, some of them cannot be run on other environments, some of them are not relevant, eg all related to masterchef and BgovToken
+here are some tests for the new interest rate model
+brownie test testsarbitrum/interest-rate-model/test_InterestRate.py --network arb-main-fork -i
+
+
+[02/17/2022 4:37 PM] geopok20216#4651
+That command fails because arb-main-fork isn't in the brownie config file. Using development fails too
+
+
+[02/19/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Ooki** contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: Ooki's team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping an organizer if you have questions along the way!
+
+
+[05/17/2022 11:13 AM] dravee
+Just this one left, and we can close February 😄. Can we have some news? 👀
+
+{Reactions}
+😂 (2) 🙏 
+
+[05/18/2022 12:31 AM] kirk_baird
+Not quite there's still Anchor 😉
+
+{Reactions}
+ethereumcolor thisisfine (3) psyduck (2) 
+
+[08/08/2022 5:46 PM] 0x1f8b
+Any news?
+
+
+[08/10/2022 6:41 PM] 0x1f8b
+Is the judge alive?
+
+
+[08/10/2022 8:29 PM] cloudellie
+I have answered your questions in #❓questions
+
+
+[08/10/2022 8:30 PM] cloudellie
+But I would remind you to be respectful in your comments, per the Code of Conduct in #👉start-here .
+
+
+[08/10/2022 8:42 PM] 0x1f8b
+I think I have not been respectful at any time, keep in mind that it has been asked on multiple occasions (from may) for news and has not been answered, that is disrespectful.
+
+
+[08/10/2022 8:44 PM] cloudellie
+Feel free to follow up if I don't post an update by end of next week.
+
+{Reactions}
+thankyou 
+
+[08/12/2022 4:30 PM] cloudellie
+**Update on the Ooki contest: **
+
+As you're all aware, the Ooki contest has been in post-contest processing for an extraordinarily long time. The TL;DR is that we scoped the contest incorrectly, and that only became apparent after the judge flagged it for us. 
+
+(We have since instituted several new checks to ensure that scope checks happen much earlier in the process, including the creation of a new Scout role -- so hopefully we'll avoid a repeat of this scenario.) 
+
+When we became aware that there was a scoping problem here, we proposed to the sponsor that they could re-run the contest with a more appropriate scope and award pool, but we haven't been able to make that work. So: **we will distribute the awards to those who submitted valid findings, but we will not be producing a report or opening up the repo. **
+
+I apologize for the extremely long delay in getting this one sorted. My hope is that in the meanwhile, we've improved our processes to ensure none of you (or us) is put in this position again. 
+
+Thanks for bearing with us.
+
+{Reactions}
+👍 (2) 
+
+[08/12/2022 4:44 PM] itsmetechjay
+🤑 🎉 Awards for **Ooki**:
+
+$10,580.62 USDC » @csanuragjain 
+$6,197.62 USDC » @gzeon 
+$5,100.00 USDC » @cccz 
+$5,100.00 USDC » @hyh 
+$945.57 USDC » @robee 
+$691.15 USDC » @Dravee 
+$607.14 USDC » @DefSec 
+$314.46 USDC » @0v3rf10w 
+$249.39 USDC » @0x1f8b 
+$126.50 USDC » @IllIllI 
+$87.56 USDC » @Tomio 
+
+🏁 Findings summary
+---------------------------
+Med risk findings: 5 total, 5 unique
+Gas optimization reports: 9 
+QA reports: 7
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations all! 💸 💸 💸
+
+{Reactions}
+🎉 (2) 
+
+[08/12/2022 4:50 PM] 0x1f8b
+Started a thread.
+
+
+==============================================================
+Exported 28 message(s)
+==============================================================
